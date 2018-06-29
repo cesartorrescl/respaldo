@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/blanco"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <requestFocus />
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:fitsSystemWindows="true"
+        android:background="@color/blanco">
+        <ImageView
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+    </android.support.percent.PercentRelativeLayout>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/link_home">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="40%"
+            app:layout_heightPercent="8%"
+            android:text="Iniciar Sesión"
+            android:id="@+id/txt_iniciar_sesion2"
+            android:layout_toEndOf="@+id/volver">
+            <ImageView
+                android:id="@+id/img_inicio_sesion2"
+                app:layout_widthPercent="15%"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="5%"
+                app:layout_marginRightPercent="5%"
+                app:layout_marginTopPercent="15%"
+                app:layout_marginBottomPercent="15%"
+                android:background="@drawable/usuario"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txt_inicia_sesion2"
+                android:text="Inicia Sesión"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:gravity="center_vertical"
+                android:layout_toEndOf="@+id/img_inicio_sesion2"/>
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/area_sesion">
+
+        <EditText
+            app:layout_widthPercent="70%"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="15%"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/correo"
+            android:hint="eMail"
+            android:paddingLeft="10dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/gris"
+            android:background="@drawable/border_edittext"/>
+
+        <EditText
+            app:layout_widthPercent="70%"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="5%"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/contrasena"
+            android:hint="Contraseña"
+            android:paddingLeft="10dp"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/gris"
+            android:layout_below="@+id/correo"
+            android:background="@drawable/border_edittext"
+            android:password="true" />
+
+        <CheckBox
+            app:layout_widthPercent="60%"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="5%"
+            app:layout_marginTopPercent="2%"
+            android:text="Mantener Conectado"
+            android:textColor="@color/celeste_letra_index"
+            android:layout_below="@+id/contrasena"
+            android:id="@+id/mantener"
+            android:buttonTint="@color/celeste_letra_index" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Olvidaste tu contraseña?"
+            app:layout_marginTopPercent="5%"
+            android:textSize="15dp"
+            android:layout_below="@+id/mantener"
+            android:textColor="@color/celeste_letra_index"
+            android:id="@+id/txt_forget_pass"
+            android:layout_centerHorizontal="true"/>
+
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="2%"
+            android:id="@+id/inicio_sesion"
+            android:layout_below="@+id/txt_forget_pass"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/border_inicio_sesion">
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/inicio_sesion_2">
+
+            <TextView
+                android:id="@+id/txt_inicio_sesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Iniciar Sesión"
+                android:textSize="20sp"
+                android:textColor="@color/blanco"/>
+
+        </android.support.percent.PercentRelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer"
+            android:background="@color/negro"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_serial"
+                android:text="Serial Nova Data" />
+
+            <ImageView
+                app:layout_widthPercent="5%"
+                app:layout_heightPercent="5%"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_serial"
+                app:layout_marginLeftPercent="30%"
+                app:layout_marginTopPercent="1%"
+                app:layout_marginBottomPercent="1%"
+                android:background="@drawable/powered"
+                android:id="@+id/img_powered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="2%"
+                android:layout_toEndOf="@+id/img_powered"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_powered"
+                android:text="Powered by Egoview" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

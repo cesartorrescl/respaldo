@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "89301068987",
+    "firebase_url": "https://uddegoview.firebaseio.com",
+    "project_id": "uddegoview",
+    "storage_bucket": "uddegoview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89301068987:android:35e419bf5b25968b",
+        "android_client_info": {
+          "package_name": "com.egoview.udd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89301068987-8fmskq1v0esbqojlpg5hg7cmglsmbv8d.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "89301068987-8fmskq1v0esbqojlpg5hg7cmglsmbv8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzCXRjG5f19fkV44HREpTK_brCwpPMrvI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

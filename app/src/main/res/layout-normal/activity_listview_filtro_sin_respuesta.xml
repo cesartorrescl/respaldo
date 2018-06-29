@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/grisclaro">
+    <ImageView
+        android:id="@+id/logo_sin_rango"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/grisclaro"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/descripcion_imagen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/atencion_error"
+        android:layout_below="@+id/logo_sin_rango"
+        android:id="@+id/textView"
+        android:textColor="@color/textColorThirdary" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="resultado"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2_cadena_sv"
+        android:textColor="@color/textColorThirdary" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/no_hay_resultado"
+        android:layout_below="@+id/textView2_cadena_sv"
+        android:id="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/textColorThirdary" />
+</RelativeLayout>

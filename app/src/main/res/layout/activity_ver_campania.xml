@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/area_superior"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/img_oferta" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/area_nombre"
+                android:layout_toEndOf="@+id/img_oferta"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/valoracion_empresa"
+                    android:background="@drawable/border_valoracion"
+                    android:layout_marginEnd="5dp"
+                    android:visibility="invisible"
+                    android:text="5.0"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_empresa"
+                    android:text="NOMBRE EMPRESA"
+                    android:singleLine="true"
+                    android:textColor="@color/gris"
+                    android:background="@drawable/border_pref"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_oferta"
+                android:layout_below="@+id/area_nombre"
+                android:id="@+id/area_datos"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 x 1 en Sandwich barro luco o chacarero"
+                    android:textColor="@color/gris"
+                    android:textSize="20sp"
+                    android:id="@+id/txt_titulo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No dejes pasar esta increible oferta hasta agotar stock."
+                    android:textColor="@color/gris"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_descripcion"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Valora esta empresa"
+                    android:textColor="@color/rosado"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_valoracion"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/area_valoracion"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/valoracion_1"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/valoracion_2"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/valoracion_3"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/valoracion_4"
+                        android:background="@drawable/valorno"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/valoracion_5"
+                        android:background="@drawable/valorno"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:layout_below="@id/area_superior"
+            android:id="@+id/webView"
+            android:background="@drawable/border_all_categorias"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condiciones de uso"
+            android:layout_below="@id/webView"
+            android:textColor="@color/morado"
+            android:visibility="gone"
+            android:id="@+id/txt_condiciones_titulo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condiciones de uso"
+            android:layout_below="@id/txt_condiciones_titulo"
+            android:textColor="@color/gris"
+            android:visibility="gone"
+            android:id="@+id/txt_condiciones"/>
+    </RelativeLayout>
+</ScrollView>

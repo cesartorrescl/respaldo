@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/cabezera"
+        android:background="@color/blanco">
+
+        <ImageView
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cabezera"
+        android:id="@+id/area_center"
+        android:background="@color/colorPrimary">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="9%"
+            android:gravity="center_horizontal"
+            android:id="@+id/volver">
+
+            <ImageView
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="10%"
+                android:src="@drawable/volver"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView" />
+        </android.support.percent.PercentRelativeLayout>
+        <ImageView
+            app:layout_widthPercent="0.5%"
+            app:layout_heightPercent="7%"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            app:layout_widthPercent="9%"
+            app:layout_heightPercent="7%"
+            app:layout_marginRightPercent="5%"
+            app:layout_marginLeftPercent="2%"
+            app:layout_marginTopPercent="1%"
+            app:layout_marginBottomPercent="1%"
+            android:layout_toEndOf="@+id/volver"
+            android:id="@+id/img_usu_act"
+            android:background="@drawable/ico_oferta"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ofertas de la empresa"
+            android:layout_toEndOf="@+id/img_usu_act"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_cambia"/>
+    </android.support.percent.PercentRelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/area_center"
+        android:background="@color/blanco"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/area_superior"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:id="@+id/img_oferta" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/area_nombre"
+                    android:layout_toEndOf="@+id/img_oferta"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border_pref"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/valoracion_empresa"
+                        android:background="@drawable/border_valoracion"
+                        android:layout_marginEnd="5dp"
+                        android:text="5.0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_empresa"
+                        android:text="NOMBRE EMPRESA"
+                        android:singleLine="true"
+                        android:textColor="@color/gris"
+                        android:textSize="15sp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/informacion_extra"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_oferta"
+                    android:layout_below="@+id/area_nombre"
+                    android:id="@+id/area_datos"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripcion empresa"
+                        android:textColor="@color/gris"
+                        android:textSize="15sp"
+                        android:id="@+id/txt_descripcion"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/area_oculta">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Casa Matriz"
+                            android:textColor="@color/rosado"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_infoCasa"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/area_casaMatriz">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+
+                                android:id="@+id/img_casaMatriz"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="estado 215"
+                                android:textColor="@color/gris"
+                                android:textSize="12sp"
+                                android:id="@+id/txt_casaMatriz"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Horarios"
+                            android:textColor="@color/rosado"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_infoHorarios"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunes a sabado"
+                            android:textColor="@color/gris"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_horarios"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Teléfonos"
+                            android:textColor="@color/rosado"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_infoTelefonos"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="(2)25596687"
+                            android:textColor="@color/gris"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_telefonos"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sitio Web"
+                            android:textColor="@color/rosado"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_infoWeb"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="www.google.cl"
+                            android:textColor="@color/gris"
+                            android:textSize="12sp"
+                            android:id="@+id/txt_web"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Valora esta empresa"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="12sp"
+                        android:id="@+id/txt_valoracion"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/area_valoracion"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/valoracion_1"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/valoracion_2"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/valoracion_3"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/valoracion_4"
+                            android:background="@drawable/valorno"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/valoracion_5"
+                            android:background="@drawable/valorno"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Campañas activas"
+                    android:layout_below="@+id/area_datos"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp"
+                    android:id="@+id/txt_campaniaActiva"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris_claro"
+                    android:id="@+id/barra_campanias"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/txt_campaniaActiva"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/area_superior">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/oferta1"
+                    android:id="@+id/flecha_izq"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/oferta2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/flecha_der"/>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycler_ofertas"
+                    android:scrollbars="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.percent.PercentRelativeLayout>

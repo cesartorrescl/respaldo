@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/blanco"
+    android:focusableInTouchMode="true">
+    <requestFocus />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/cabezera"
+        android:background="@color/blanco">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imagen_get"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contenedor_publicacion"
+        android:background="@color/colorPrimary">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="91%"
+            android:gravity="center_horizontal"
+            android:id="@+id/volver">
+
+            <ImageView
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="10%"
+                android:src="@drawable/volver"
+                android:layout_centerHorizontal="true"/>
+        </android.support.percent.PercentRelativeLayout>
+        <ImageView
+            app:layout_widthPercent="0.5%"
+            app:layout_heightPercent="93%"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            app:layout_widthPercent="10%"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginRightPercent="5%"
+            app:layout_marginTopPercent="15%"
+            app:layout_marginBottomPercent="15%"
+            android:layout_toEndOf="@+id/volver"
+            android:id="@+id/img_usu_act"
+            android:background="@drawable/ico_oferta"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu publicación"
+            android:layout_toEndOf="@+id/img_usu_act"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_tu_publicacion"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollCont">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/contenedor_form"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gris"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtSuperior"
+                android:text="Completa el formulario y publica una oferta, promoción, venta o evento."/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/linear_principal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:id="@+id/titulo"
+                    android:hint="Titulo"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:id="@+id/descripcion"
+                    android:hint="Descripción"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:inputType="phone"
+                    android:id="@+id/agregarImagen"
+                    android:text="Agrega una imagen"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris"
+                    android:gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/galeria"
+                    android:id="@+id/galeria"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/camara"
+                    android:id="@+id/foto"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_preview">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/imageView_campania"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentStart="false"
+                    android:background="@drawable/sinfoto"
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/textView_titulo_campania"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/imageView_campania"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/textView_descripcion_campania"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_below="@id/textView_titulo_campania"
+                    android:layout_toEndOf="@+id/imageView_campania" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_vista_previa"
+                android:text="Tu publicación tendrá una vigencia de un mes."
+                android:textColor="@color/gris"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/direccion"
+                    android:hint="Dirección"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/numero_direccion"
+                    android:hint="Núm."
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:singleLine="true"
+                    android:id="@+id/comuna"
+                    android:hint="Comuna"
+                    android:textColorHint="@color/gris"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/condiciones"
+                    android:hint="Condiciones/Información adicional"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_inicio_sesion"
+                android:id="@+id/enviar_camp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Publicar"
+                    android:id="@+id/txt_publicar"
+                    android:textStyle="bold"
+                    android:textColor="@color/blanco"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer"
+            android:background="@color/negro"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_serial"
+                android:text="Serial Nova Data" />
+
+            <ImageView
+                app:layout_widthPercent="5%"
+                app:layout_heightPercent="90%"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_serial"
+                app:layout_marginLeftPercent="30%"
+                app:layout_marginTopPercent="9%"
+                app:layout_marginBottomPercent="1%"
+                android:background="@drawable/powered"
+                android:id="@+id/img_powered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="2%"
+                android:layout_toEndOf="@+id/img_powered"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_powered"
+                android:text="Powered by Egoview" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <requestFocus />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/cabezera"
+        android:background="@color/blanco">
+
+        <ImageView
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="9%"
+            android:gravity="center_horizontal"
+            android:id="@+id/volver">
+            <ImageView
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="10%"
+                android:src="@drawable/volver"
+                android:layout_centerHorizontal="true"/>
+        </android.support.percent.PercentRelativeLayout>
+        <ImageView
+            app:layout_widthPercent="0.5%"
+            app:layout_heightPercent="7%"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="5%"
+            android:text="Contacto"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_titulo"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blanco">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="2%"
+            app:layout_marginTopPercent="2%"
+            android:gravity="center_horizontal"
+            android:text="¡Hola Mauricio!\nTu opinión nos importa"
+            android:textColor="@color/celeste_letra_index"
+            android:textSize="18sp"
+            android:id="@+id/txt_opinion"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="2%"
+            app:layout_marginTopPercent="2%"
+            android:gravity="center_horizontal"
+            android:text="Envíanos tus sugerencias, felicitaciones.\nTu opinión es importante para nosotros"
+            android:textColor="@color/gris_college"
+            android:textSize="16sp"
+            android:id="@+id/txt_opinion2"
+            android:layout_below="@+id/txt_opinion"/>
+
+    <EditText
+        app:layout_widthPercent="90%"
+        app:layout_heightPercent="10%"
+        app:layout_marginTopPercent="4%"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/asunto"
+        android:hint="Asunto"
+        android:textColorHint="@color/gris"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gris_college"
+        android:background="@drawable/border_edittext"
+        android:layout_below="@+id/txt_opinion2"/>
+
+        <EditText
+            app:layout_widthPercent="90%"
+            app:layout_heightPercent="35%"
+            app:layout_marginTopPercent="4%"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mensaje"
+            android:hint="Escribe aquí"
+            android:textColorHint="@color/gris"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/border_edittext"
+            android:layout_below="@+id/asunto"/>
+        <LinearLayout
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="10%"
+            app:layout_marginTopPercent="4%"
+            android:orientation="horizontal"
+            android:layout_below="@+id/mensaje"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="8dp"
+            android:id="@+id/enviar"
+            android:background="@drawable/border_inicio_sesion">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:id="@+id/txt_enviar"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/blanco"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer"
+            android:background="@color/negro"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_serial"
+                android:text="Serial Nova Data" />
+
+            <ImageView
+                app:layout_widthPercent="5%"
+                app:layout_heightPercent="5%"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_serial"
+                app:layout_marginLeftPercent="30%"
+                app:layout_marginTopPercent="1%"
+                app:layout_marginBottomPercent="1%"
+                android:background="@drawable/powered"
+                android:id="@+id/img_powered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="2%"
+                android:layout_toEndOf="@+id/img_powered"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_powered"
+                android:text="Powered by Egoview" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

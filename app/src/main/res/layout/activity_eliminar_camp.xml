@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.percent.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/blanco">
+
+    <ImageView
+        app:layout_widthPercent="45%"
+        app:layout_heightPercent="12%"
+        android:background="@drawable/logo"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+</android.support.percent.PercentRelativeLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/colorPrimary"
+android:orientation="horizontal">
+
+<android.support.percent.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/link_home">
+    <android.support.percent.PercentRelativeLayout
+        app:layout_widthPercent="20%"
+        app:layout_heightPercent="8%"
+        android:gravity="center_horizontal"
+        android:id="@+id/volver">
+        <ImageView
+            app:layout_widthPercent="50%"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="10%"
+            app:layout_marginBottomPercent="10%"
+            android:id="@+id/img_volver"
+            android:src="@drawable/volver"/>
+    </android.support.percent.PercentRelativeLayout>
+    <ImageView
+        app:layout_widthPercent="0.5%"
+        app:layout_heightPercent="7%"
+        android:background="@color/colorPrimaryDark"
+        android:layout_toEndOf="@+id/volver"
+        android:layout_centerVertical="true"/>
+    <android.support.percent.PercentRelativeLayout
+        app:layout_widthPercent="80%"
+        app:layout_heightPercent="8%"
+        android:text="Iniciar Sesión"
+        android:id="@+id/area_oferta"
+        android:layout_toEndOf="@+id/volver">
+
+        <ImageView
+            android:id="@+id/img_oferta"
+            app:layout_widthPercent="12%"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginRightPercent="5%"
+            app:layout_marginTopPercent="10%"
+            app:layout_marginBottomPercent="10%"
+            android:background="@drawable/ico_oferta"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txt_oferta"
+            android:text="Finalizar Publicación"
+            android:textSize="15sp"
+            android:textColor="@color/blanco"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/img_oferta"/>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>
+</LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco">
+
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="95%"
+            app:layout_heightPercent="15%"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="2%"
+            app:layout_marginBottomPercent="2%"
+            android:background="@drawable/border_eliminar">
+
+            <TextView
+                app:layout_widthPercent="60%"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSecondary"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:text="¿Estás seguro de querer eliminar esta publicación?"
+                android:id="@+id/txt_eliminar"/>
+
+            <ImageView
+                app:layout_widthPercent="15%"
+                app:layout_heightPercent="65%"
+                app:layout_marginEndPercent="23%"
+                android:id="@+id/boton_si"
+                android:background="@drawable/si"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageView
+                app:layout_widthPercent="15%"
+                app:layout_heightPercent="65%"
+                app:layout_marginEndPercent="5%"
+                android:id="@+id/boton_no"
+                android:background="@drawable/no"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+            
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco"
+        android:id="@+id/scrollEliminar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_oferta_detalle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_oferta_detalle"
+                android:id="@+id/txt_empresa"
+                android:text="NOMBRE EMPRESA"
+                android:singleLine="true"
+                android:textColor="@color/gris"
+                android:background="@drawable/border_pref"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_oferta_detalle"
+                android:layout_below="@+id/txt_empresa"
+                android:text="2 x 1 en Sandwich barro luco o chacarero"
+                android:textColor="@color/gris"
+                android:textSize="20sp"
+                android:id="@+id/txt_titulo"/>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_oferta_detalle"
+                android:id="@+id/webView"
+                android:background="@drawable/border_all_categorias"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Condiciones de uso"
+                android:layout_below="@id/webView"
+                android:textColor="@color/gris"
+                android:id="@+id/txt_condiciones_titulo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Condiciones de uso"
+                android:layout_below="@id/txt_condiciones_titulo"
+                android:textColor="@color/gris"
+                android:id="@+id/txt_condiciones"/>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:background="@color/negro"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="3%"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_serial"
+            android:text="Serial Nova Data" />
+
+        <ImageView
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="80%"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txt_serial"
+            app:layout_marginLeftPercent="30%"
+            app:layout_marginTopPercent="1%"
+            app:layout_marginBottomPercent="1%"
+            android:background="@drawable/powered"
+            android:id="@+id/img_powered"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="2%"
+            android:layout_toEndOf="@+id/img_powered"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_powered"
+            android:text="Powered by Egoview" />
+
+    </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

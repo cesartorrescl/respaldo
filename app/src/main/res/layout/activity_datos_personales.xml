@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/blanco"
+    android:focusableInTouchMode="true">
+    <requestFocus />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/cabezera"
+        android:background="@color/blanco">
+
+        <ImageView
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="9%"
+            android:gravity="center_horizontal"
+            android:id="@+id/volver">
+            <ImageView
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="10%"
+                android:src="@drawable/volver"
+                android:layout_centerHorizontal="true"/>
+        </android.support.percent.PercentRelativeLayout>
+        <ImageView
+            app:layout_widthPercent="0.5%"
+            app:layout_heightPercent="7%"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            app:layout_widthPercent="9%"
+            app:layout_heightPercent="7%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginRightPercent="2%"
+            app:layout_marginTopPercent="1%"
+            app:layout_marginBottomPercent="1%"
+            android:layout_toEndOf="@+id/volver"
+            android:id="@+id/img_usu_act"
+            android:background="@drawable/usuario"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Datos Personales"
+            android:layout_toEndOf="@+id/img_usu_act"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_datos_personales"/>
+    </android.support.percent.PercentRelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:id="@+id/nombre"
+                android:hint="Nombre"
+                android:textColorHint="@color/gris"
+                android:paddingLeft="10dp"
+                android:textColor="@color/gris_college"
+                android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:id="@+id/apellido"
+                android:hint="Apellido"
+                android:textColorHint="@color/gris"
+                android:paddingLeft="10dp"
+                android:textColor="@color/gris_college"
+                android:background="@drawable/border_edittext"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:id="@+id/correo"
+                android:hint="tumail@mail.com"
+                android:textColorHint="@color/gris"
+                android:paddingLeft="10dp"
+                android:textColor="@color/gris_college"
+                android:background="@drawable/border_edittext"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:id="@+id/fecha_nac"
+                android:hint="Cumpleaños"
+                android:textColorHint="@color/gris"
+                android:paddingLeft="10dp"
+                android:textColor="@color/gris_college"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_edittext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:id="@+id/telefono"
+                    android:hint="Telefono"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/gris_college"
+                    android:background="@drawable/border_edittext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/direccion"
+                    android:hint="Calle"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:id="@+id/numero_direccion"
+                    android:hint="Número"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:id="@+id/complemento_direccion"
+                    android:hint="Villa o departamento"
+                    android:textColorHint="@color/gris"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:singleLine="true"
+                    android:id="@+id/comuna"
+                    android:hint="Comuna"
+                    android:textColorHint="@color/gris"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/border_edittext" />
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/mantener"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/hombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soy Hombre"
+                    android:buttonTint="@color/celeste_letra_index"
+                    android:textColor="@color/celeste_letra_index"/>
+
+                <RadioButton
+                    android:id="@+id/mujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soy Mujer"
+                    android:buttonTint="@color/celeste_letra_index"
+                    android:textColor="@color/celeste_letra_index"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:orientation="horizontal"
+                android:background="@drawable/border_inicio_sesion"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="16dp"
+                android:id="@+id/actualizar">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actualizar datos"
+                        android:id="@+id/txt_actualizar_datos"
+                        android:textStyle="bold"
+                        android:textColor="@color/blanco"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer"
+            android:layout_alignParentBottom="true"
+            android:background="@color/negro">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_serial"
+                android:text="Serial Nova Data" />
+
+            <ImageView
+                app:layout_widthPercent="5%"
+                app:layout_heightPercent="5%"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_serial"
+                app:layout_marginLeftPercent="30%"
+                app:layout_marginTopPercent="1%"
+                app:layout_marginBottomPercent="1%"
+                android:background="@drawable/powered"
+                android:id="@+id/img_powered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="2%"
+                android:layout_toEndOf="@+id/img_powered"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_powered"
+                android:text="Powered by Egoview" />
+
+        </android.support.percent.PercentRelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

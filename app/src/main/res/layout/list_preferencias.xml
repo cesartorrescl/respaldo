@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_pref">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/img_pref"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_pref"
+        android:layout_centerVertical="true"
+        android:text="Restaurantes y Bares"
+        android:textColor="@color/gris"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt_pref"
+        android:textSize="20dp"/>
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:id="@+id/switch_pref"
+        android:layout_alignParentEnd="true"
+        app:kswThumbColor="@color/morado_oscuro"
+        app:kswTintColor="@color/morado"/>
+</RelativeLayout>

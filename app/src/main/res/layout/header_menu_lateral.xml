@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blanco"
+    android:id="@+id/content_frame_fragment">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo"
+            android:id="@+id/img_header"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Hola Usuario!"
+            android:layout_below="@+id/img_header"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:textColor="@color/colorSecondary"
+            android:id="@+id/txt_usuario"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_usuario"
+            android:layout_centerHorizontal="true"
+            android:text="Estas son tus configuraciones"
+            android:textSize="25sp"
+            android:textColor="@color/colorSecondary"
+            android:id="@+id/txt_conf"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_below="@+id/txt_conf">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_mercado"
+                    android:textColor="@color/negro"
+                    android:gravity="center_horizontal"
+                    android:text="Mercado"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/publicar_eliminar"
+                    android:background="@drawable/border_invitado"/>
+        </LinearLayout>
+</RelativeLayout>

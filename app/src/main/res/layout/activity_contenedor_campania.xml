@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:id="@+id/activity_contenedor_campania">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/superior"
+        android:orientation="vertical">
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco"
+        android:orientation="horizontal">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:id="@+id/link_home">
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                app:layout_heightPercent="8%"
+                android:gravity="center_horizontal"
+                android:id="@+id/volver">
+                <ImageView
+                    app:layout_widthPercent="50%"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="10%"
+                    app:layout_marginBottomPercent="10%"
+                    android:id="@+id/img_volver"
+                    android:src="@drawable/volver"/>
+            </android.support.percent.PercentRelativeLayout>
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                app:layout_heightPercent="8%"
+                android:text="Iniciar Sesión"
+                android:id="@+id/area_oferta"
+                android:layout_toEndOf="@+id/volver">
+                <ImageView
+                    app:layout_widthPercent="0.5%"
+                    app:layout_heightPercent="90%"
+                    android:id="@+id/divisor"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="2%"
+                    android:id="@+id/txt_oferta"
+                    android:text="Comunicados"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/divisor"/>
+            </android.support.percent.PercentRelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
+    </LinearLayout>
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cont_detalle"
+       android:background="@color/blanco"
+        android:visibility="visible">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_detalle"
+        class="com.egoview.udd.vistas.compartidas.Fragment_activity_ver_campania"/>
+
+    </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/contenedor_social"
+        android:background="@color/blanco"
+        android:layout_alignParentBottom="true">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                android:id="@+id/cont_mg"
+                app:layout_heightPercent="70%"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="50%"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_mg"
+                    android:background="@drawable/mg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="10%"
+                    android:textColor="@color/blanco"
+                    android:id="@+id/txt_cantMG"
+                    android:text="100"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_mg"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                android:id="@+id/cont_nmg"
+                android:layout_toEndOf="@+id/cont_mg"
+                app:layout_heightPercent="70%">
+
+                <ImageView
+                    app:layout_widthPercent="1%"
+                    app:layout_heightPercent="80%"
+                    android:background="@color/azulclaro_college"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="50%"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_nmg"
+                    android:background="@drawable/no_mg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco"
+                    app:layout_marginTopPercent="10%"
+                    android:id="@+id/txt_cantNMG"
+                    android:text="100"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_nmg"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                android:id="@+id/cont_fav"
+                android:layout_toEndOf="@+id/cont_nmg"
+                app:layout_heightPercent="70%">
+
+                <ImageView
+                    app:layout_widthPercent="1%"
+                    app:layout_heightPercent="80%"
+                    android:background="@color/azulclaro_college"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="50%"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_fav"
+                    android:background="@drawable/favoritos_detalle"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco"
+                    app:layout_marginTopPercent="10%"
+                    android:id="@+id/txt_fav"
+                    android:text="Favoritos"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_fav"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                android:id="@+id/cont_visto"
+                android:layout_toEndOf="@+id/cont_fav"
+                app:layout_heightPercent="70%">
+
+                <ImageView
+                    app:layout_widthPercent="1%"
+                    app:layout_heightPercent="80%"
+                    android:background="@color/azulclaro_college"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="50%"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_visto"
+                    android:background="@drawable/vst"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco"
+                    app:layout_marginTopPercent="10%"
+                    android:id="@+id/txt_visto"
+                    android:text="Visto"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_visto"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                app:layout_widthPercent="20%"
+                android:id="@+id/cont_comp"
+                android:layout_toEndOf="@+id/cont_visto"
+                app:layout_heightPercent="70%">
+
+                <ImageView
+                    app:layout_widthPercent="1%"
+                    app:layout_heightPercent="80%"
+                    android:background="@color/azulclaro_college"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="50%"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_comp"
+                    android:background="@drawable/compartir"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco"
+                    app:layout_marginTopPercent="10%"
+                    android:id="@+id/txt_comp"
+                    android:text="Compartir"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_comp"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer"
+            android:background="@color/negro"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_serial"
+                android:text="Serial Nova Data" />
+
+            <ImageView
+                app:layout_widthPercent="5%"
+                app:layout_heightPercent="20%"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_serial"
+                app:layout_marginLeftPercent="30%"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="1%"
+                android:background="@drawable/powered"
+                android:id="@+id/img_powered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="2%"
+                android:layout_toEndOf="@+id/img_powered"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:id="@+id/txt_powered"
+                android:text="Powered by Egoview" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

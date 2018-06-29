@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- TITULOS -->
+    <string name="app_name">Hubin</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="checkbox_text">Item Text</string>
+    <string name="search">Buscar en Egoview Demo</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="celular1">¡Regístrate gratis!\nPodrás filtrar por tus intereses,\ndarle \"Me gusta\" o \"No Me Gusta\", denunciar\ncampañas y compartir contenidos.</string>
+    <string name="celular2">También, podrás agregar\ncampañas a favoritos y valorar\na las empresas que publican.</string>
+    <string name="celular3">Incluso podrás hacer tus propias\npublicaciones en nuestra comunidad.\nRegístrate y forma parte de\n la comunidad Get4u.</string>
+    <string name="Bienvenida">Bienvenida</string>
+
+    <!--LAYOUT-->
+    <string name="texto1">, Bienvenido a Hubin.</string>
+    <string name="texto2">Nosotros lo buscamos por ti.</string>
+    <string name="cerrar_sesion">¿Desea Cerrar Hubin?</string>
+    <string name="respuesta_si">Si</string>
+    <string name="respuesta_no">No</string>
+    <!--TOAST-->
+    <string name="Toast_sin_conexion">Usted no esta conectado a Internet</string>
+    <string name="Toast_error_usuario">Usuario o Contraseña Incorrecta, Volver a Intentar</string>
+
+    <!--DIALOG-->
+    <string name="Dialog_mensaje_preferencias"> Cargando sus preferencias </string>
+    <string name="Dialog_mensaje_validacion_user"> Validando Usuario.... </string>
+    <string name="Dialog_mensaje_espera"> Por favor espere.... </string>
+
+    <!-- DRAWER LAYOUT-->
+    <string name="drawer_open"> abierto </string>
+    <string name="drawer_close"> cerrado </string>
+
+    <string name="crop_image_activity_title">Hubin</string>
+    <string name="crop_image_menu_crop">Cortar</string>
+
+    <!--API KEY-->
+    <string name="google_maps_key">AIzaSyCzCXRjG5f19fkV44HREpTK_brCwpPMrvI</string>
+
+    <!-- nuevo servicio azure-->
+    <string name="URL_Mobile_Service">https://uddappservice.azurewebsites.net/</string>
+    <string name="URL_Mobile_Web">http://www.hubin.cl/</string>
+
+    <!--Opciones Menu Lateral -->
+    <string name="Opcion1">Datos personales</string>
+    <string name="Opcion2">Cambiar contraseña</string>;
+    <string name="Opcion3">Solicitar Vacaciones</string>;
+    <string name="Opcion4">Contacto</string>;
+    <string name="Opcion5">Preferencias</string>;
+    <string name="Opcion10">Cerrar Sesión</string>;
+    <string name="Opcion11">Salir</string>;
+    <!-- Promt_comunas -->
+    <string name="direccion">Ingresar Direccion</string>
+    <string name="comunas_prompt">Escoger comuna</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submitted">escribiendo....</string>
+    <string name="Toast_error_password">Contraseña no corresponde a los parametros</string>
+    <string name="error_servicio">no se ha podido actualizar las preferencias</string>
+    <string name="error_notificaciones">no se ha podido actualizar las notificaciones</string>
+    <string name="Preferences">Preferencias</string>
+    <string name="Titulo_Modificar_datos_usuario">Datos Usuario</string>
+    <string name="correo_electronico_user">Correo Electrónico</string>
+    <string name="nombre_usuario">Nombre</string>
+    <string name="fecha_nacimiento_usuario">Fecha de Nacimiento</string>
+    <string name="formato_fecha">dd-mm-aaaa</string>
+    <string name="sexo_usuario">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="cod_telefono_user">+569</string>
+    <string name="telefono_usuario">Teléfono</string>
+    <string name="direccion_usuario">Dirección</string>
+    <string name="numero_direccion_usuario">Número</string>
+    <string name="complemento_direccion_user">Complemento Dirección</string>
+    <string name="comuna_user">Comuna</string>
+    <string name="codigo_postal_usuario">Código Postal</string>
+    <string name="apellido_usuario">Apellido</string>
+    <string name="notificacion_titulo">Notificaciones</string>
+    <string name="correo_titulo_notificaciones">Correo</string>
+    <string name="titulo_msj_notificaciones">Mensaje de Texto</string>
+    <string name="telefono_titulo_notificaiciones">Teléfono</string>
+    <string name="medida_metros_notificacion">mts</string>
+    <string name="rango_titulo_notificaciones">Rango</string>
+    <string name="password_main">password</string>
+    <string name="usuario_main">usuario</string>
+    <string name="msj_checkbox_main">Siempre Conectado</string>
+    <string name="descripcion_imagen">logo</string>
+    <string name="buscar_direccion_titulo">Buscar Dirección</string>
+    <string name="cambiar_contrasenia_titulo">Cambiar Contraseña</string>
+    <string name="contrasenia_actual">constraseña actual</string>
+    <string name="nueva_contrasenia_text">nueva contraseña</string>
+    <string name="rep_nueva_contrasenia">rep. nueva contraseña</string>
+    <string name="campani_titulo_contenedor">Campania</string>
+    <string name="img_bienvenida1">imagen_bienvenida_1</string>
+    <string name="datos_user">Datos Usuario</string>
+    <string name="imagen_footer_bienvenida">imagen_footer_bienvenida</string>
+    <string name="re_password_new_user">confirmar password</string>
+    <string name="password_new_user">password</string>
+    <string name="email_new_user">email</string>
+    <string name="correo_id_usuario">usuario</string>
+    <string name="correo_usuario_login">password</string>
+    <string name="titulo_distancia_contenedor">Distancia desde Mi ubicación</string>
+    <string name="imagen_campania_descripcion">imagen campania</string>
+    <string name="titulo_campania">Titulo</string>
+    <string name="descripcion_campania">Descripción</string>
+    <string name="campania_distancia">27 mts</string>
+    <string name="atencion_error">Le informa</string>
+    <string name="no_hay_campanias">Que no Hay Campañas asociadas</string>
+    <string name="disculpas">Disculpe las molestias</string>
+    <string name="no_hay_ofertas_rango">Que no hay ofertas en el rango de busqueda</string>
+    <string name="titulo_registro">Login o Ingreso Usuario Nuevo</string>
+    <string name="no_hay_conexion">Que no hay Conexión</string>
+    <string name="inicio_sesion_personalizado">inicio sesión o registro</string>
+    <string name="separador_numero">-</string>
+    <string name="icon_menu_lateral">punto</string>
+    <string name="distancia_text">"Estamos a: "</string>
+    <string name="no_hay_resultado">No se han encontrado resultados</string>
+    <string name="ambiente_ego">EgoviewDemo</string>;
+</resources>

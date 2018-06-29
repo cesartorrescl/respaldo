@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gris_fondo"
+    android:layout_marginTop="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/area_camp"
+        android:background="@color/blanco"
+        android:visibility="visible">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView_campania"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_campania"
+        android:lines="1"
+        android:ellipsize="end"
+        android:id="@+id/contenedor_inicial"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gris"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/imageView_campania">
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/valoracion_empresa"
+            android:background="@drawable/border_valoracion"
+            android:layout_marginEnd="5dp"
+            android:visibility="invisible"
+            android:text="5.0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_campania"
+            android:lines="1"
+            android:ellipsize="end"
+            android:id="@+id/textView_titulo_campania"
+            android:textColor="@color/gris"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-30dp"
+            android:id="@+id/contFav"
+            android:layout_toEndOf="@id/contenedor_inicial">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/social_fav"
+                android:background="@drawable/fav"/>
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descripcion_campania"
+        android:lines="2"
+        android:ellipsize="end"
+        android:id="@+id/textView_descripcion_campania"
+        android:paddingLeft="10dp"
+        android:textColor="@color/azulclaro_college"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/contenedor_inicial"
+        android:layout_toEndOf="@+id/imageView_campania" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_campania"
+            android:lines="2"
+            android:ellipsize="end"
+            android:id="@+id/textView_empresa_pagada"
+            android:paddingLeft="10dp"
+            android:textColor="@color/gris"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/textView_descripcion_campania"
+            android:layout_toEndOf="@+id/imageView_campania" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/campania_distancia"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/textView_distancia"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorSecondary"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView3"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="-40dp"
+        android:visibility="invisible"
+        android:layout_alignStart="@id/textView_distancia" />
+        <!--android:src="" -->
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/area_social"
+        android:background="@color/blanco"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/social_mg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/social_mg"
+            android:layout_marginEnd="14dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_mg"
+            android:textColor="@color/gris_oscuro"
+            android:text="15"
+            android:layout_marginEnd="10dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/social_nmg"
+            android:layout_toEndOf="@+id/txt_cantidad_mg"
+            android:background="@drawable/social_nmg"
+            android:layout_marginStart="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_nmg"
+            android:textColor="@color/gris_oscuro"
+            android:text="15"
+            android:layout_marginStart="10dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/social_comp"
+            android:layout_toEndOf="@+id/txt_cantidad_nmg"
+            android:background="@drawable/comp"
+            android:layout_marginStart="30dp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/social_visto"
+            android:layout_toEndOf="@+id/social_comp"
+            android:background="@drawable/vst"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_visto"
+            android:textColor="@color/gris_oscuro"
+            android:text="Visto"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_comp"
+            android:textColor="@color/gris_oscuro"
+            android:text="Compartir"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="40dp"/> -->
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/area_ver_todas"
+        android:background="@color/blanco"
+        android:gravity="center_vertical"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/rojo_cupon"
+            android:id="@+id/txt_ver_todas"
+            android:text="VER TODAS LAS OFERTAS DE LA EMPRESA"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:id="@+id/img_ver_todas"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

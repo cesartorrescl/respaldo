@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/blanco"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <requestFocus />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/cabezera"
+        android:background="@color/blanco">
+
+        <ImageView
+            app:layout_widthPercent="70%"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/logo"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="9%"
+            android:gravity="center_horizontal"
+            android:id="@+id/volver">
+            <ImageView
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginBottomPercent="10%"
+                android:src="@drawable/volver"
+                android:layout_centerHorizontal="true"/>
+        </android.support.percent.PercentRelativeLayout>
+        <ImageView
+            app:layout_widthPercent="0.5%"
+            app:layout_heightPercent="7%"
+            android:background="@color/colorPrimaryDark"
+            android:layout_toEndOf="@+id/volver"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            app:layout_widthPercent="9%"
+            app:layout_heightPercent="7%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginRightPercent="2%"
+            app:layout_marginTopPercent="1%"
+            app:layout_marginBottomPercent="1%"
+            android:id="@+id/img_usu_act"
+            android:layout_toEndOf="@+id/volver"
+            android:background="@drawable/usuario_actv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Contraseña"
+            android:layout_toEndOf="@+id/img_usu_act"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_cambio_contrasena"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:inputType="textPassword"
+                android:id="@+id/prev_pass"
+                android:paddingLeft="10dp"
+                android:hint="Contraseña actual"
+                android:textColor="@color/gris_college"
+                android:textColorHint="@color/gris"
+                android:background="@drawable/border_edittext" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:inputType="textPassword"
+                android:id="@+id/new_pass"
+                android:paddingLeft="10dp"
+                android:hint="Nueva contraseña"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/gris"
+                android:background="@drawable/border_edittext"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:inputType="textPassword"
+                android:imeOptions="actionGo"
+                android:id="@+id/rep_pass"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:hint="Repetir contraseña"
+                android:textColor="@color/gris_college"
+                android:textColorHint="@color/gris"
+                android:background="@drawable/border_edittext"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Olvidaste tu contraseña?"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp"
+                android:layout_below="@+id/txt_register"
+                android:textColor="@color/celeste_letra_index"
+                android:id="@+id/txt_forget_pass"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="8dp"
+                android:id="@+id/cambiar_clave"
+                android:background="@drawable/border_inicio_sesion">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cambiar"
+                        android:id="@+id/txt_actualizar_datos"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="@color/blanco"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:background="@color/negro">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="3%"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_serial"
+            android:text="Serial Nova Data" />
+
+        <ImageView
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txt_serial"
+            app:layout_marginLeftPercent="30%"
+            app:layout_marginTopPercent="3%"
+            app:layout_marginBottomPercent="1%"
+            android:background="@drawable/powered"
+            android:id="@+id/img_powered"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="2%"
+            android:layout_toEndOf="@+id/img_powered"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/blanco"
+            android:id="@+id/txt_powered"
+            android:text="Powered by Egoview" />
+
+    </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

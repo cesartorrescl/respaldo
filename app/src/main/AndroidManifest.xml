@@ -1,0 +1,257 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.egoview.udd">
+
+    <uses-feature android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <permission android:name="com.egoview.udd.android.maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <!-- permisos de localizacion
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+
+<uses-permission android:name="com.egoview.udd.android.maps.permission.MAPS_RECEIVE"/>
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+<uses-feature android:name="android.hardware.camera"
+    android:required="true" />
+
+<permission android:name="com.egoview.udd.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+<uses-permission android:name="com.egoview.udd.permission.C2D_MESSAGE"/>
+<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+
+<application
+    android:icon="@drawable/ic_launcher"
+    android:allowBackup="true"
+    android:name="com.egoview.udd.procesos.AnalyticsApplication"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme">
+
+    <service android:name="com.egoview.udd.Push.MyInstanceIDService">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+    </service>
+
+    <service
+        android:name="com.egoview.udd.Push.RegistrationIntentService"
+        android:exported="false">
+    </service>
+
+    <receiver android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+        android:permission="com.google.android.c2dm.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="com.egoview.udd" />
+        </intent-filter>
+    </receiver>
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="@string/google_maps_key"/>
+
+    <activity
+        android:name="com.egoview.udd.vistas.compartidas.Splash"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEWEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="get4you.scheme" />
+        </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.genericas.activity_inicio"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.InicioEgoviewDemo"/>
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.genericas.BuscarCategoriasGeneric"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.BuscarCategoriasGenericdesaEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+
+    <activity
+        android:name="com.egoview.udd.contenedores.generico.ContenedorHomeGeneric"
+        android:screenOrientation="portrait"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustPan">
+    <intent-filter>
+            <action android:name="android.intent.action.ContenedorHomeGenericdesaEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.contenedores.compartido.ContenedorCampania"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.ContenedorCampaniadesaEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+<activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_cambiar_clave"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.Cambiar_ContrasenaEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_cambiar_preferencias"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.Cambiar_Preferencias" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_datos_personales"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.Datos_personalesEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.genericas.zoomImagen"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.zoomEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_solicitar_vacaciones"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.solicitar_vacacionesEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.genericas.activity_ofertas_empresa"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.ofertas_empresaEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_eliminar_campania"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.eliminar_campEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_sucursal_form"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.publicarEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_creando_campania"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Translucent"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.creando_campEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_links_interes"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.links_interesEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.egoview.udd.vistas.personalizadas.activity_contacto"
+        android:windowSoftInputMode="adjustPan"
+        android:screenOrientation="portrait"
+        android:label=" ">
+        <intent-filter>
+            <action android:name="android.intent.action.contactoEgoviewDemo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+
+    <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+        android:theme="@style/Theme.AppCompat"/>
+
+</application>
+</manifest>
